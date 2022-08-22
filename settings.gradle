@@ -1,0 +1,12 @@
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+    }
+    resolutionStrategy.eachPlugin {
+        if (pluginRequest.id.id == 'io.sentry.android.gradle') {
+            useModule("io.sentry:sentry-android-gradle-plugin:${pluginRequest.version}")
+        }
+    }
+}
